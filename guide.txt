@@ -1,0 +1,4 @@
+1. run script user in folder sh ./add-docker-user [username] ]
+2. access user jenkins sudo su [username] 
+3. docker run -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):$(which docker) -v `pwd`/data:/var/jenkins_home  -p 8080:8080  --name jenkins -jenkins/jenkins:lts
+4. sudo chmod 777 /var/run/docker.sock
